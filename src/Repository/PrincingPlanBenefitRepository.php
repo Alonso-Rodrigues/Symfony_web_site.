@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\PricingPlanBenefit;
+use App\Entity\PrincingPlanBenefit;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<PricingPlanBenefit>
+ * @extends ServiceEntityRepository<PrincingPlanBenefit>
  *
- * @method PricingPlanBenefit|null find($id, $lockMode = null, $lockVersion = null)
- * @method PricingPlanBenefit|null findOneBy(array $criteria, array $orderBy = null)
- * @method PricingPlanBenefit[]    findAll()
- * @method PricingPlanBenefit[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method PrincingPlanBenefit|null find($id, $lockMode = null, $lockVersion = null)
+ * @method PrincingPlanBenefit|null findOneBy(array $criteria, array $orderBy = null)
+ * @method PrincingPlanBenefit[]    findAll()
+ * @method PrincingPlanBenefit[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class PricingPlanBenefitRepository extends ServiceEntityRepository
+class PrincingPlanBenefitRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, PricingPlanBenefit::class);
+        parent::__construct($registry, PrincingPlanBenefit::class);
     }
 
-    public function save(PricingPlanBenefit $entity, bool $flush = false): void
+    public function save(PrincingPlanBenefit $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class PricingPlanBenefitRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(PricingPlanBenefit $entity, bool $flush = false): void
+    public function remove(PrincingPlanBenefit $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class PricingPlanBenefitRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return PricingPlanBenefit[] Returns an array of PricingPlanBenefit objects
+//     * @return PrincingPlanBenefit[] Returns an array of PrincingPlanBenefit objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class PricingPlanBenefitRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?PricingPlanBenefit
+//    public function findOneBySomeField($value): ?PrincingPlanBenefit
 //    {
 //        return $this->createQueryBuilder('p')
 //            ->andWhere('p.exampleField = :val')
